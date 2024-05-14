@@ -106,6 +106,7 @@ def handle_voice(message: Message):
 
 @bot.message_handler(content_types=['text'])
 def handle_text(message):
+    print('пасхалка')
     try:
         user_id = message.from_user.id
 
