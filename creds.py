@@ -6,9 +6,9 @@ import requests
 
 from config import LOGS, IAM_TOKEN_PATH, FOLDER_ID_PATH, BOT_TOKEN_PATH
 
-
 logging.basicConfig(filename=LOGS, level=logging.INFO,
                     format="%(asctime)s FILE: %(filename)s IN: %(funcName)s MESSAGE: %(message)s", filemode="w")
+
 
 # получение нового iam_token
 def create_new_token():
@@ -30,6 +30,7 @@ def create_new_token():
             logging.error(f"Ошибка получения iam_token. Статус-код: {response.status_code}")
     except Exception as e:
         logging.error(f"Ошибка получения iam_token: {e}")
+
 
 # чтение iam_token и folder_id из файла
 def get_creds():
@@ -57,6 +58,7 @@ def get_creds():
         folder_id = f.read().strip()
 
     return iam_token, folder_id
+
 
 # чтение bot_token из файла
 def get_bot_token():

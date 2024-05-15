@@ -1,4 +1,10 @@
-HOME_DIR = '/home/student/the_end'
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+HOME_DIR = os.getenv('HOME_DIR')
+
 
 IAM_TOKEN_PATH = f'{HOME_DIR}/creds/iam_token.txt'  # файл для хранения iam_token
 FOLDER_ID_PATH = f'{HOME_DIR}/creds/folder_id.txt'  # файл для хранения folder_id
@@ -6,8 +12,6 @@ BOT_TOKEN_PATH = f'{HOME_DIR}/creds/bot_token.txt'  # файл для хране
 
 
 IAM_TOKEN = "t1.9euelZrOx4uSlc6ViZaWkJubkpTNze3rnpWal4vNlMiLis_MncrNjJmMyMnl8_dnPHJN-e8lf3Jo_N3z9ydrb0357yV_cmj8zef1656Vmpaamp7Oy4mUi56JlIqWkJ7I7_zF656Vmpaamp7Oy4mUi56JlIqWkJ7IveuelZqRls-Kjo-ajY6dlI6VzpvPz7XehpzRnJCSj4qLmtGLmdKckJKPioua0pKai56bnoue0oye.n3oPozjYBNQHq2w7aBcNTQELzUgPFj4metH1c1Ai6QFpgpPsCJXkdjTDaVkN4ShpygpmWqZE6XJWeAij0OOgCA"
-FOLDER_ID = os.getenv('FOLDER_ID')
-TOKEN = os.getenv('TG_TOKEN')
 
 MAX_USERS = 3
 MAX_GPT_TOKENS = 120
