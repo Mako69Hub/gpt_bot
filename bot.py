@@ -1,6 +1,6 @@
 import telebot
 import logging
-from config import TOKEN, LOGS, COUNT_LAST_MSG
+from config import LOGS, COUNT_LAST_MSG
 from telebot.types import Message
 from database import create_database, add_message, select_n_last_messages
 from yandex_gpt import ask_gpt
