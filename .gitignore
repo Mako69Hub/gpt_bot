@@ -1,0 +1,7 @@
+venv/
+creds.py
+ssh
+key
+creds/
+.env
+.idea/
