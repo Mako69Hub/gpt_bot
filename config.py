@@ -36,8 +36,4 @@ url_stt = 'https://stt.api.cloud.yandex.net/speech/v1/stt:recognize'
 
 headers = {'Authorization': f'Bearer {IAM_TOKEN}', }
 
-params_stt = "&".join([
-    "topic=general",
-    f"folderId={FOLDER_ID}",
-    "lang=ru-RU"
-])
+

@@ -1,5 +1,5 @@
 import requests
-from config import url_tts, url_stt, params_stt, headers
+from config import url_tts, url_stt, headers
 from creds import get_creds  # модуль для получения токенов
 
 IAM_TOKEN, FOLDER_ID = get_creds()  # получаем iam_token и folder_id из файлов
@@ -19,6 +19,13 @@ def text_to_speech(text):
 
 
 def speech_to_text(file):
+
+    params_stt = "&".join([
+        "topic=general",
+        f"folderId={FOLDER_ID}",
+        "lang=ru-RU"
+    ])
+
     response = requests.post(
         f"{url_stt}?{params_stt}",
         headers=headers,
